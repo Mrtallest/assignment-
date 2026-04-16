@@ -2970,7 +2970,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactDefault.default).
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./App":"1vcj2","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./styles/globals.css":"foYjz"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./App":"1vcj2","./styles/globals.css":"foYjz","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -27061,7 +27061,7 @@ $RefreshReg$(_c, "AppRoutes");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../pages/Home":"10OMF","../pages/Dashboard":"aGrOi","../pages/Login":"5SoHl","../pages/Signup":"iFGt8","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../pages/Contact":"kVz1D"}],"10OMF":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../pages/Home":"10OMF","../pages/Dashboard":"aGrOi","../pages/Login":"5SoHl","../pages/Signup":"iFGt8","../pages/Contact":"kVz1D","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"10OMF":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9bff = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27390,7 +27390,7 @@ $RefreshReg$(_c, "Home");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/Navbar":"1QxXD","../styles/home.css":"gjC6H","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react-router-dom":"9xmpe"}],"1QxXD":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-router-dom":"9xmpe","../components/Navbar":"1QxXD","../styles/home.css":"gjC6H","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"1QxXD":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$9080 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27574,12 +27574,21 @@ var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _s = $RefreshSig$();
+const THEME_STORAGE_KEY = "harmony-theme";
+function getInitialDarkMode() {
+    if (typeof window === "undefined") return false;
+    const storedTheme = window.localStorage.getItem(THEME_STORAGE_KEY);
+    if (storedTheme === "dark") return true;
+    if (storedTheme === "light") return false;
+    if (document.body.classList.contains("dark")) return true;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+}
 function DarkModeToggle() {
     _s();
-    const [dark, setDark] = (0, _react.useState)(false);
+    const [dark, setDark] = (0, _react.useState)(getInitialDarkMode);
     (0, _react.useEffect)(()=>{
-        if (dark) document.body.classList.add("dark");
-        else document.body.classList.remove("dark");
+        document.body.classList.toggle("dark", dark);
+        window.localStorage.setItem(THEME_STORAGE_KEY, dark ? "dark" : "light");
     }, [
         dark
     ]);
@@ -27591,11 +27600,11 @@ function DarkModeToggle() {
         children: dark ? "Light" : "Dark"
     }, void 0, false, {
         fileName: "frontend/components/DarkModeToggle.tsx",
-        lineNumber: 12,
+        lineNumber: 35,
         columnNumber: 5
     }, this);
 }
-_s(DarkModeToggle, "NIHBMCmnQYc/ThVDFkFE1j89faA=");
+_s(DarkModeToggle, "/UB9PnacKlGbY6A5/fQp0Mth0k8=");
 _c = DarkModeToggle;
 var _c;
 $RefreshReg$(_c, "DarkModeToggle");
@@ -27978,7 +27987,7 @@ $RefreshReg$(_c, "ChartCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../styles/ChartCard.css":"coX0s"}],"coX0s":[function() {},{}],"5SoHl":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../styles/ChartCard.css":"coX0s","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"coX0s":[function() {},{}],"5SoHl":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$21e5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -28072,7 +28081,7 @@ $RefreshReg$(_c, "Login");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../components/Navbar":"1QxXD","../styles/login.css":"2ytNf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"2ytNf":[function() {},{}],"iFGt8":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../components/Navbar":"1QxXD","../styles/login.css":"2ytNf","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq"}],"2ytNf":[function() {},{}],"iFGt8":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$14b6 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

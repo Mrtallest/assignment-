@@ -335,21 +335,26 @@ body.dark .chart-placeholder {
 }
 
 .auth-container {
-  background: linear-gradient(120deg, #0077b6, #00b4d8);
+  background: radial-gradient(circle at 20% 15%, #0f8cff3d, transparent 35%),
+    radial-gradient(circle at 82% 4%, #1bc6a633, transparent 30%),
+    linear-gradient(120deg, var(--surface-1), var(--bg-main));
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 1.2rem;
   display: flex;
 }
 
 .auth-card {
-  background: #fff;
-  border-radius: 16px;
+  background: var(--surface-0);
+  border: 1px solid var(--border-soft);
   width: 100%;
   max-width: 380px;
+  color: var(--ink-primary);
+  border-radius: 16px;
   padding: 2.5rem;
   animation: .6s slideUp;
-  box-shadow: 0 30px 60px #0003;
+  box-shadow: 0 30px 60px #10233d29;
 }
 
 .auth-card h1, .auth-card h2 {
@@ -357,34 +362,55 @@ body.dark .chart-placeholder {
 }
 
 .auth-card p {
-  opacity: .7;
+  color: var(--ink-secondary);
   margin-bottom: 1.5rem;
 }
 
 .auth-card input {
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  border: 1px solid var(--border-strong);
+  background: var(--surface-1);
   width: 100%;
+  color: var(--ink-primary);
+  border-radius: 8px;
   margin-bottom: 1rem;
   padding: .9rem;
 }
 
+.auth-card input::placeholder {
+  color: var(--ink-tertiary);
+}
+
+.auth-card input:focus {
+  border-color: var(--brand-500);
+  outline: 2px solid #0f8cff47;
+}
+
 .auth-card button {
+  background: var(--brand-700);
   color: #fff;
-  background: #0077b6;
+  border-radius: 8px;
   width: 100%;
   padding: .9rem;
   font-size: 1rem;
+  font-weight: 700;
 }
 
 .auth-card button:hover {
-  background: #005f8f;
+  filter: brightness(.94);
 }
 
 .switch {
   text-align: center;
   margin-top: 1rem;
   display: block;
+}
+
+body.dark .auth-container {
+  background: radial-gradient(circle at 20% 12%, #3d9fff38, #0000 32%), radial-gradient(circle at 86% 8%, #22b89033, #0000 28%), linear-gradient(120deg, #0b1b2f, #081426);
+}
+
+body.dark .auth-card {
+  box-shadow: 0 30px 70px #00000073;
 }
 
 @keyframes slideUp {
