@@ -1,0 +1,21 @@
+.feature-card {
+  background: white;
+  padding: 2.2rem;
+  border-radius: 14px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card h2 {
+  margin-bottom: 0.6rem;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+body.dark .feature-card {
+  background-color: #1e293b;
+}

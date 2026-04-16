@@ -1,0 +1,192 @@
+.landing-page {
+  min-height: 100vh;
+}
+
+.landing-main {
+  width: min(1040px, calc(100% - 2rem));
+  margin: 0 auto;
+  padding: 2rem 0 3rem;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 3rem 1.2rem;
+  background: var(--surface-0);
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+}
+
+.eyebrow {
+  margin: 0;
+  color: var(--brand-700);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.hero-section h1 {
+  margin: 0.8rem auto 0;
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  max-width: 16ch;
+  line-height: 1.15;
+}
+
+.hero-subtitle {
+  margin: 1rem auto 0;
+  color: var(--ink-secondary);
+  max-width: 62ch;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn {
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  font-size: 0.92rem;
+  font-weight: 700;
+}
+
+.primary-btn {
+  background: var(--brand-700);
+  color: #ffffff;
+}
+
+.secondary-btn {
+  border: 1px solid var(--border-strong);
+  color: var(--ink-primary);
+  background: var(--surface-0);
+}
+
+.stats-section {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.stat-card {
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  background: var(--surface-0);
+  padding: 1rem;
+  text-align: center;
+}
+
+.stat-card h3 {
+  margin: 0;
+  font-family: "Sora", sans-serif;
+  font-size: 1.35rem;
+}
+
+.stat-card p {
+  margin: 0.35rem 0 0;
+  color: var(--ink-secondary);
+}
+
+.features-section {
+  margin-top: 2.3rem;
+}
+
+.features-section h2 {
+  font-family: "Sora", sans-serif;
+  text-align: center;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.feature-grid {
+  margin-top: 1rem;
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.feature-card {
+  border: 1px solid var(--border-soft);
+  border-radius: 12px;
+  background: var(--surface-0);
+  padding: 1rem;
+}
+
+.feature-card h3 {
+  margin: 0 0 0.55rem;
+  font-size: 1.02rem;
+}
+
+.feature-card p {
+  margin: 0;
+  color: var(--ink-secondary);
+  line-height: 1.6;
+}
+
+.cta-section {
+  margin-top: 2.3rem;
+  text-align: center;
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  background: var(--surface-0);
+  padding: 2rem 1rem;
+}
+
+.cta-section h2 {
+  margin: 0;
+  font-family: "Sora", sans-serif;
+  font-size: clamp(1.4rem, 3vw, 1.9rem);
+}
+
+.cta-section p {
+  margin: 0.8rem auto 0;
+  color: var(--ink-secondary);
+  max-width: 58ch;
+}
+
+.cta-section .primary-btn {
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.footer {
+  width: min(1040px, calc(100% - 2rem));
+  margin: 0 auto 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-soft);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.7rem;
+  flex-wrap: wrap;
+}
+
+.footer p {
+  margin: 0;
+  color: var(--ink-primary);
+  font-weight: 700;
+}
+
+.footer span {
+  margin: 0;
+  color: var(--ink-secondary);
+}
+
+#features,
+#benefits,
+#contact {
+  scroll-margin-top: 5.5rem;
+}
+
+@media (max-width: 860px) {
+  .stats-section,
+  .feature-grid {
+    grid-template-columns: 1fr;
+  }
+}

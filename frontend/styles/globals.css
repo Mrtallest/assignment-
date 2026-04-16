@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@600;700;800&display=swap");
+
+:root {
+  --brand-500: #0f8cff;
+  --brand-700: #005fcc;
+  --accent-500: #1bc6a6;
+  --bg-main: #f3f8ff;
+  --surface-0: #ffffff;
+  --surface-1: #edf5ff;
+  --ink-primary: #10233d;
+  --ink-secondary: #435774;
+  --ink-tertiary: #627493;
+  --border-soft: #d8e4f3;
+  --border-strong: #bfd3ea;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Manrope", "Segoe UI", sans-serif;
+  background: var(--bg-main);
+  color: var(--ink-primary);
+  min-height: 100vh;
+  line-height: 1.45;
+}
+
+body.dark {
+  --bg-main: #081426;
+  --surface-0: #0f2038;
+  --surface-1: #152c47;
+  --ink-primary: #ecf4ff;
+  --ink-secondary: #b5c7df;
+  --ink-tertiary: #95acc8;
+  --border-soft: #1f3a5d;
+  --border-strong: #2b4a70;
+  --brand-500: #3d9fff;
+  --brand-700: #1a73d2;
+  --accent-500: #22b890;
+  background: var(--bg-main);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+  border: 0;
+  font: inherit;
+}

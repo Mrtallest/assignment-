@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #1c1c1c;
+  background-color: #f7f9fc;
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  transition: background-color .3s, color .3s;
+}
+
+body.dark {
+  color: #e5e7eb;
+  background-color: #0f172a;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  transition: all .25s;
+}
+
+/*# sourceMappingURL=index.0fb573cc.css.map */

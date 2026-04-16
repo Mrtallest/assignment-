@@ -1,0 +1,29 @@
+.dashboard {
+  padding: 2.5rem;
+}
+
+.dashboard h1 {
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: #0077b6;
+}
+
+body.dark .card {
+  background-color: #1e293b;
+}

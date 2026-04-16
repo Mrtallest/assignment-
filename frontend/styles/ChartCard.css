@@ -1,0 +1,28 @@
+.chart-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.08);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chart-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+}
+
+.chart-placeholder {
+  height: 120px;
+  background: #e0e0e0;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+body.dark .chart-card {
+  background-color: #1e293b;
+}
+
+body.dark .chart-placeholder {
+  background-color: #334155;
+}

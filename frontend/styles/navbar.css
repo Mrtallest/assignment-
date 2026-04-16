@@ -1,0 +1,87 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 120;
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  border-bottom: 1px solid var(--border-soft);
+  background: var(--surface-0);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  color: var(--ink-primary);
+  font-family: "Sora", sans-serif;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--ink-secondary);
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: var(--ink-primary);
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.nav-text-link {
+  text-decoration: none;
+  color: var(--ink-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.nav-cta {
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 0.55rem 0.85rem;
+  background: var(--brand-700);
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.theme-toggle {
+  border: 1px solid var(--border-soft);
+  background: var(--surface-1);
+  color: var(--ink-primary);
+  font-size: 0.78rem;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 0.44rem 0.58rem;
+}
+
+@media (max-width: 820px) {
+  .nav-links,
+  .nav-text-link {
+    display: none;
+  }
+
+  .navbar {
+    padding: 0.85rem 1rem;
+  }
+}
